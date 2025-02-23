@@ -15,6 +15,14 @@ Same goes for any errors related to this page.
 
 # Asymptotics using Mathematica
 
+To quote <a href="https://www.wolfram.com/language/12/asymptotics">https://www.wolfram.com/language/12/asymptotics</a>:
+
+> Asymptotic methods represent a third mode of computing that complements exact symbolic and approximate numeric modes of computing for calculus and algebra. Asymptotic methods are what disciplines turn to when they run into hard problems and are used in a wide variety of areas, including number theory, analysis of algorithms, statistics, theoretical physics and numerical methods. Asymptotic computing allows hard problems to be solved and furthermore is typically more insightful even when other modes of computing succeed. With Version 12, asymptotic computing is fully automated and as easy to use as other high-level solvers.
+
+The corresponding guide is here: <a href="https://reference.wolfram.com/language/guide/Asymptotics.html">https://reference.wolfram.com/language/guide/Asymptotics.html</a>
+
+Note that these are **exact** calculations, so one can put the results into a paper. Arguable, this is better than doing it by hand :relaxed:
+
 # For the cobordism category
 
 In this case one simply needs to setup the function:
