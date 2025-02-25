@@ -1,6 +1,6 @@
 # Code and Erratum for *Growth problems in diagram categories*
 
-I collected a bit of Mathematica code relevant for the paper *Growth problems in diagram categories*
+I collected a bit of Mathematica code and additional details relevant for the paper *Growth problems in diagram categories*
 <a href="https://arxiv.org/abs/2412.01283">https://arxiv.org/abs/2412.01283</a> on this page.
 
 An Erratum for the paper *Growth problems in diagram categories* can be found at the bottom of the page.
@@ -13,6 +13,17 @@ If you find any errors in the paper *Growth problems in diagram categories* **pl
 
 Same goes for any errors related to this page.
 
+# Asymptotics from generating functions
+
+Relevant for the paper is Hayman's method, which on MathSciNet is summarzed by the quote (from Boas, R. P. on MathSciNet):
+
+<div style="text-align: center"><img src="https://github.com/dtubbenhauer/growth-diagram/blob/main/stirling.png" width="800" height="800" style="border: 0px;" /></div>
+
+For the exponential generating function $f(x)=\exp(\frac{k}{2}\exp(2x)+\exp(x)-\frac{k+2}{2})$ satisfies all requirements. One then calculates $g(x)=xf'(x)/f(x)$ 
+and $h(x)=xg'(x)$ (which is easy) and performs some algebra on it. All of this can be computer verified with Mathematica code, as explained in <a href="https://arxiv.org/abs/2207.10568">https://arxiv.org/abs/2207.10568</a>.
+
+Note that these are **exact** calculations, so one can put the results into a paper. Arguable, this is better than doing it by hand :relaxed:
+
 # Asymptotics using Mathematica
 
 To quote <a href="https://www.wolfram.com/language/12/asymptotics">https://www.wolfram.com/language/12/asymptotics</a>:
@@ -21,7 +32,7 @@ To quote <a href="https://www.wolfram.com/language/12/asymptotics">https://www.w
 
 The corresponding guide is here: <a href="https://reference.wolfram.com/language/guide/Asymptotics.html">https://reference.wolfram.com/language/guide/Asymptotics.html</a>
 
-Note that these are **exact** calculations, so one can put the results into a paper. Arguable, this is better than doing it by hand :relaxed:
+Note again that these are **exact** calculations, so one can put the results into a paper. Arguable, this is better than doing it by hand :relaxed:
 
 # For the cobordism category
 
@@ -49,6 +60,10 @@ Asymptotic[(a[n, 1])^(1/n) // Simplify, n -> Infinity]
 ```
 
 The code runs for general $k$, but takes a while to evaluate. For fixed $k$ this is very quick.
+
+# Additional details for the calculation in Knop's category
+
+To be done
 
 # Erratum
 
