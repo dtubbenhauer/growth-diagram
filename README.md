@@ -63,7 +63,7 @@ The code runs for general $k$, but takes a while to evaluate. For fixed $k$ this
 
 # Additional details for the calculation in Knop's category
 
-To be done
+A pdf file containing more detailed arguments can be found here: <a href="https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf">https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf</a>.
 
 # Erratum
 
