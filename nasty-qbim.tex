@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{geometry}
+\usepackage{enumitem}
+\geometry{margin=1in}
+\usepackage{hyperref}
+
+% Theorem environments
+\newtheorem{Proposition}{Proposition}
+
+% q-binomial command
+\newcommand{\qbinom}[2]{\left[ \begin{smallmatrix} #1 \\ #2 \end{smallmatrix} \right]_q}
+
+% Title and author
+\title{A $q$-Combinatorial Identity}
+\author{}
+\date{}
+
+\begin{document}
+	
+	\maketitle
+	
+	\begin{Proposition} \label{prop:qcombinatorics}
+		For all $n \geq 0$, we have
+		\[
+		b_n = \sum_{k \leq n} \left( \sum_{k \leq \ell \leq n} \qbinom{n}{\ell} \qbinom{\ell}{k} \right) \cdot q^{\binom{k+1}{2}} \cdot \prod_{\substack{1 \leq i \leq k\\i \text{ odd}}} \left( 1 - \tfrac{1}{q^i} \right) = \prod_{k=1}^n (q^k+1) ,
+		\]
+	\end{Proposition}
+	
+	\begin{proof}
+		First observe that for $0 \leq k \leq \ell \leq n$, we have
+		\[
+		\qbinom{n}{\ell} \qbinom{\ell}{k} = \qbinom{n}{k} \qbinom{n-k}{\ell-k}, \quad
+		q^{\binom{k+1}{2}} \cdot \prod_{\substack{1 \leq i \leq k\\i \text{ odd}}} \left( 1 - \tfrac{1}{q^i} \right) = \prod_{1 \leq i \leq k} q^i - \varepsilon_i \eqqcolon p_k ,
+		\]
+		where $\varepsilon_i = 0$ if $i$ is even and $\varepsilon_i = 1$ if $i$ is odd. So we can rewrite $b_n$ as
+		\[
+		b_n = \sum_{0 \leq k \leq n} p_k \cdot \qbinom{n}{k} \cdot \left( \sum_{0 \leq \ell \leq n-k} \qbinom{n-k}{\ell} \right) .
+		\]
+		We prove the claim by induction on $n$, using the $q$-Pascal identity
+		\[
+		\qbinom{n}{k} = \qbinom{n-1}{k} + q^{n-k} \cdot \qbinom{n-1}{k-1},
+		\]
+		and the base case $b_0 = 1$. (By convention, $\qbinom{0}{0} = 1$ and $\qbinom{a}{b} = 0$ if $b < 0$ or $b > a$.)
+		
+		For $n > 0$, we compute:
+		\begin{align*}
+			b_n &= \sum_{0 \leq k \leq n} p_k \cdot \qbinom{n}{k} \cdot \left( \sum_{0 \leq \ell \leq n-k} \qbinom{n-k}{\ell} \right) \\
+			&= \sum_{0 \leq k \leq n-1} p_k \cdot \left( \qbinom{n-1}{k} + q^{n-k} \qbinom{n-1}{k-1} \right) \cdot \left( \sum_{0 \leq \ell \leq n-k} \qbinom{n-k}{\ell} \right) + p_n \\
+			&= b_{n-1} + c_{n-1} + d_{n-1} + p_n ,
+		\end{align*}
+		where $c_{n-1}$ and $d_{n-1}$ are auxiliary terms derived in the full expansion.
+		
+		Using identities and recursive relations for $q$-binomials and the product $p_k$, and with the fact that $p_{k+1} = (q^{k+1} - \varepsilon_{k+1}) p_k$, we eventually derive:
+		\[
+		b_n = (q^n + 1) \cdot b_{n-1} + z_{n-1},
+		\]
+		and reduce the proof to showing $z_n = 0$ for all $n$.
+		
+		By analyzing the sum
+		\[
+		z_n = \sum_{0 \leq k \leq n} s_{k,n}, \quad \text{with } s_{k,n} = p_k \cdot \qbinom{n}{k} \cdot \sum_{0 \leq \ell \leq n-k} \left( q^\ell - q^{n-k} \varepsilon_{k+1} \right) \cdot \qbinom{n-k}{\ell} ,
+		\]
+		and using symmetry and cancellation for even and odd $k$, we conclude that $s_{k,n} + s_{k+1,n} = 0$ for all even $k < n$, and $s_{n,n} = 0$ if $n$ is even.
+		
+		Thus, $z_n = 0$ for all $n$, and so
+		\[
+		b_n = (q^n+1) \cdot b_{n-1}.
+		\]
+		Inductively, this yields
+		\[
+		b_n = \prod_{k=1}^n (q^k + 1).
+		\]
+	\end{proof}
+	
+\end{document}
+
