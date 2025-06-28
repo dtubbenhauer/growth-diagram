@@ -65,7 +65,7 @@ The code runs for general $k$, but takes a while to evaluate. For fixed $k$ this
 
 A pdf file containing more detailed arguments can be found here: <a href="https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf">https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf</a>. In particular, 
 one rather nasty calculation is outsourced into that file, or as a standalone document which can be found here: 
-<a href="https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf">https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf</a>.
+<a href="https://github.com/dtubbenhauer/growth-diagram/blob/main/nasty-qbim.tex">https://github.com/dtubbenhauer/growth-diagram/blob/main/nasty-qbim.tex</a>.
 
 # Erratum
 
