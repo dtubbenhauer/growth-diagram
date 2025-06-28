@@ -61,9 +61,11 @@ Asymptotic[(a[n, 1])^(1/n) // Simplify, n -> Infinity]
 
 The code runs for general $k$, but takes a while to evaluate. For fixed $k$ this is very quick.
 
-# Additional details for the calculation in Knop's category
+# Additional details for the calculation in Knop's category and a nasty q-identity
 
-A pdf file containing more detailed arguments can be found here: <a href="https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf">https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf</a>.
+A pdf file containing more detailed arguments can be found here: <a href="https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf">https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf</a>. In particular, 
+one rather nasty calculation is outsourced into that file, or as a standalone document which can be found here: 
+<a href="https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf">https://github.com/dtubbenhauer/growth-diagram/blob/main/growth_diagram.pdf</a>.
 
 # Erratum
 
